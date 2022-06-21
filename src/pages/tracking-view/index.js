@@ -11,8 +11,7 @@ const TrakingView = () => {
   const { coords, runTraker } = UseTracking();
 
   useEffect(() => {
-    console.log(coords?.timestamp);
-    setCoordsList([...coordsList, coords?.timestamp]);
+    setCoordsList([...coordsList, "lat: "+ coords?.coords.latitude + " lon: "+ coords?.coords.longitude  + " accu: " + coords?.coords.accuracy ]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [coords]);
 

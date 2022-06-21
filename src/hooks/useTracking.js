@@ -22,7 +22,7 @@ const UseTracking = () => {
         errorPosition,
         CURRENT_POSITION_OPTIONS
       );
-    }, 1000);
+    }, 2000);
   }
 
   return { coords, runTraker };
