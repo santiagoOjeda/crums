@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 
 const UseTracking = () => {
   const [coords, setCoords] = useState(null);

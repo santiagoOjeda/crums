@@ -13,6 +13,7 @@ const TrakingView = () => {
   useEffect(() => {
     console.log(coords?.timestamp);
     setCoordsList([...coordsList, coords?.timestamp]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [coords]);
 
   return (
