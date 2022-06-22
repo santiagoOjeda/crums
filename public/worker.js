@@ -1,1 +1,1 @@
-conaole.log('WORKER WORKSSSS');
+console.log('WORKER WORKSSSS');

@@ -33,11 +33,18 @@
       console.log("From index html");
 
     if ('serviceWorker' in navigator) {
+
+  
       navigator.serviceWorker.register('./worker.js')
-      .catch(function(err) {
-        console.log('ServiceWorker failed to register. Are you visiting the HTTPS site?');
+      .then(function(registration) {
+        console.log('Service worker registration succeeded:', registration);
+      }).catch(function(error) {
+        console.log('Service worker registration failed:', error);
       });
-    }
+} else {
+  console.log('Service workers are not supported.');
+}
+    
     </script>
     <!--
       This HTML file is a template.
