@@ -15,6 +15,20 @@ const TrakingView = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [coords]);
 
+  useEffect(() => {
+    
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('../../../public/worker.js', { scope: '/' })
+      .catch(function(err) {
+        console.log('ServiceWorker failed to register. Are you visiting the HTTPS site?');
+      });
+    }
+  
+    return () => {
+      console.log('destroy')
+    };
+  }, [])
+
   return (
     <section>
       <ul>
